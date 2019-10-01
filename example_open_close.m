@@ -24,3 +24,5 @@ open_sample = sig((event1-window):event1);
 figure;
 subplot(2,1,1), plot(closed_sample), title('closed')
 subplot(2,1,2), plot(open_sample), title('open')
+
+plot_FFT(closed_sample, 250);
