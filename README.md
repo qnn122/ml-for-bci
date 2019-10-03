@@ -1,6 +1,35 @@
 # Machine Learning for Brain-Computer Interface
 
-## Usage
-Run `example_open_close.m`.
+This repository serves as a complementary material for the `Brain Computer Interface (BM074IU)` course offered by Biomedical Engineering Department, International University - Vietnam National University, HCMC, Vietnam, Fall 2019.
 
-Contact: nnquang122@gmail.com
+## Usage
+
+First time? Run:
+
+```./experiments/open-close-eyes/example-open-close.m```
+
+The repository is structured as followed:
+
+```terminal
+├── data
+├── tools
+├── experiments
+|  ├── open-close-eyes
+|  └── ssvep
+```
+
+The `experiments` folder contains all the sample studies. Each study contains experiment descriptions and resulted analysis. User should read the `README.md` of each experiment before anything else.
+
+The `data` folder contains all the data used in the `experiments`; `tools` all the source codes and toolboxes used.
+
+## Contact
+
+Course's instructor: 
+    Ha Thi Thanh Huong, Ph.D.,
+    (htthuong@hcmiu.edu.vn)
+
+Teaching assistant:
+    Nguyen Hoai Thuong (nhthuong@hcmiu.edu.vn)
+
+Guess lecturer: 
+    Quang Nguyen (nnquang122@gmail.com)
