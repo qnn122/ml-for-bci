@@ -1,16 +1,16 @@
 %% Load data
-addpath './data/test alpha 5s'
+addpath '../../data/test alpha 5s'
 ALLEEG = load('5sopen_close.mat').ALLEEG; % EEGLAB format
 sig = ALLEEG.data;
 plot(sig)
 
 %% Load tool
-addpath './tools/spectral'
-help plot_spectrogram
+addpath '../../tools/spectral'
+help plot_spectrogram   % Take a look at input requirments of the plot_spectrogram function
 
 %% Visualization
 figure;
-start = 700;
+start = 700;    % First few seconds of the recording is often artifacts.
 subplot(2,1,1), plot(sig(start:end))
 ax = subplot(2,1,2); plot_spectrogram(sig, start, 1, ax), colorbar('Off');
 
