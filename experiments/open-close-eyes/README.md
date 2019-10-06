@@ -9,6 +9,14 @@ Read more about WEEG at: https://github.com/bobvo23/WEEG_SigPro
 
 EEG data is recorded in two differential channels. Gelled Electrodes are placed on the subject’s scalp according to the **International Electrode (10-20) Placement System.** One Ground (bias) electrode is placed on the left mastoid. The differential pair of channel two is placed on the **Oz and O2** (image below). The **sampling rate is 250 Hz**. 
 
+The exact placement of the electrodes is as folows:
+- Left Mastoid: DRL
+- Right astoid: CH1-
+- O2: CH1+
+- O1: CH2+
+- Oz: CH2- 
+
+
 <p align="center">
     <img src="./images/electrode-placement.png" width=400 style="float:center">
 </p>
