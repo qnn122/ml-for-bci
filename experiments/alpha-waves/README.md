@@ -1,4 +1,7 @@
-# Simple BCI Experiment: Open and Closed Eyes
+# Simple BCI Experiment: Alpha Waves (Open and Close Eyes)
+
+## What is alpha waves
+(to be added)
 
 ## Experiment Description
 
@@ -23,7 +26,7 @@ The exact placement of the electrodes is as folows:
 
 
 ### Protocol
-The subject is a student (23-year-old) who participated voluntarily in this experiment. The experiment comprises two phases. First, the subject sits and relaxes on a chair with his eyes open for 15s. There are none stimuli in front of the subject’s eyes. Second, the subject closes his eyes in 5s and opens his eye in 5s for every trial. This protocol is illustrated in the figure below. 
+The subject is a student (23-year-old) who participated voluntarily in this experiment. The experiment comprises two phases. First, the subject sits and relaxes on a chair with his eyes open for 15s. There are none stimuli in front of the subject’s eyes. Second, the subject **closes his eyes in 5s** and **opens his eye in 5s** for every trial. This protocol is illustrated in the figure below. 
 
 <p align="center" >
     <img src="./images/protocol.png " width=400>
@@ -48,4 +51,6 @@ Comming soon...
 
 
 ## Usage
-Run 'example_open_close.m' to see the analysis.
+Run:
+1. `data_exploration.m` to understand the data structure and see some visualization
+2. `feature_extraction_classification.m` to see how feature extraction and classification using machine learning are done.

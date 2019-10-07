@@ -6,7 +6,7 @@ This repository serves as a complementary material for the `Brain Computer Inter
 
 First time? Run:
 
-```./experiments/open-close-eyes/example-open-close.m```
+```./experiments/alpha-waves/data-exploration.m```
 
 The repository is structured as followed:
 
@@ -14,7 +14,7 @@ The repository is structured as followed:
 ├── data
 ├── tools
 ├── experiments
-|  ├── open-close-eyes
+|  ├── alpha-waves
 |  └── ssvep
 ```
 
