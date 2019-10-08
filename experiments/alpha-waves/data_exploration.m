@@ -45,20 +45,19 @@ figure;
 hax = subplot(1,1,1);
 plot_spectrogram(sig, start, 1, hax); 
 
-numevent = length(events); colorbar('Off'), colormap(jet(256))
-
+% Plot event onset over the 
 events_close = [];
 events_open = [];
-
+numevent = length(events); 
 for i = 1:numevent
     event = events(i).latency;
     event_norm = (event - start)/Fs/60;     % offseted by start, normalized by Fs and minutes
     x = [event_norm, event_norm];
     y = [0, 35];
-    if mod(i,2) == 0    % even = OPEN (BLUE)
+    if mod(i,2) == 0    % even = OPEN
         line(hax, x,y, 'Color', 'blue', 'LineWidth', 2)
-        events_open = [events_open, event];
-    else                % odd = CLOSE (RED)
+        events_open = [events_open, event]; % TODO:handling better variable 
+    else                % odd = CLOSE
         line(hax, x,y, 'Color', 'red', 'LineWidth', 2)
         events_close = [events_close, event];
     end

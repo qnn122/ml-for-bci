@@ -2,7 +2,6 @@
 
 This repository serves as a complementary material for the `Brain Computer Interface (BM074IU)` course offered by Biomedical Engineering Department, International University - Vietnam National University, HCMC, Vietnam, Fall 2019.
 
---- 
 
 ## Usage
 
@@ -24,7 +23,6 @@ The `experiments` folder contains all the sample studies. Each study contains ex
 
 The `data` folder contains all the data used in the `experiments`; `tools` all the source codes and toolboxes used.
 
---- 
 
 ## Contact
 
@@ -38,7 +36,6 @@ Teaching assistant:
 Guess lecturer: 
     Quang Nguyen (nnquang122@gmail.com)
 
----
 
 ## License & Copyright
 
