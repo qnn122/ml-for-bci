@@ -17,7 +17,6 @@ function plotFFT_simulation(sig, Fs, chan, windowL, overlap, ha_fft, event, ha_e
 %   plotFFT_simulation(data1ftft, 255);
 %
 % See also fft
-cla(ha_fft);
 global i
 global iend ts
  %queue for snr to make sure that high snr is a high snr from brainwaves 
@@ -70,7 +69,7 @@ htitle = title(ha_fft,'Simulated Real Time Power Spectrum');
 xlabel(ha_fft,'Frequency (Hz)'); ylabel(ha_fft,'|Y(f)|');
 
 % Event marker plot
-timemarker = time_simulation(event, ha_event, Fs);
+% timemarker = time_simulation(event, ha_event, Fs);
 
 % Start stimulation
 jump = floor(overlap*windowL);
@@ -117,35 +116,15 @@ for i=i:jump:iend
     else
       tc = 2;
     end
-
-    %Display 3 top peaks instead of only maximum value
-            [sorted,I] = sort(interestY,'descend');    %sort ouput Y
-            [r,c] = ind2sub(size(interestY),I(1:5));  %//Change 10 to any other required value
-
-%            xmax1 = interestF1(c1(1));
-%            ymax1 = interestY1(c1(1));
-        for k=1:3 % 3 top peaks
-        %snr = 20 * log10((ymax/meanY)^2);
-        strmax = ['Max= ',num2str(interestF(c(k))),' SNR= ',num2str(interestY(c(k))/meanY)];
-        %strmax = ['Max= ',num2str(xmax)];
-        if (interestY(c(k))/meanY > 3.2)
-            tc = 1; %assign red if it is a detection
-        else
-            tc = 2;
-        end
-        text('Position', [interestF(c(k)), interestY(c(k))], 'String', strmax, 'Parent', ha_fft)
-        %'HorizontalAlignment','left','color',textcolor(tc),'Parent',ha_fft);
-        %set(htext, 'Position', [interestF(c(k)) interestY(c(k))], 'String', strmax, 'color', textcolor(tc));
-        end
-        break;
+    
     % Update text
-    %set(htext, 'Position', [xmax ymax], 'String', strmax, 'color', textcolor(tc));
+    set(htext, 'Position', [xmax ymax], 'String', strmax, 'color', textcolor(tc));
     
     % Update title
     set(htitle, 'string', sprintf('Simulated Real Time Power Spectrum at t = %.2f', ts(i)));
     
     % Update time marker
-    set(timemarker, 'XData', [i i]/Fs);
+%     set(timemarker, 'XData', [i i]/Fs);
     
     if i == 1
         continue;
